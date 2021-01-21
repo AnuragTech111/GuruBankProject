@@ -1,0 +1,6 @@
+22:05:47.482 [main] INFO  com.mygithublab.DemoLoginTest - User login successfully
+22:05:47.753 [main] ERROR com.mygithublab.DemoLoginTest - User login successfully error demo 1
+22:05:47.754 [main] FATAL com.mygithublab.DemoLoginTest - User login successfully fatal demo 2
+22:05:47.754 [main] DEBUG com.mygithublab.DemoLoginTest - User login successfully debug demo 3
+22:08:18.486 [main] INFO  com.mygithublab.DemoLoginTest - User login successfully
+22:08:18.542 [main] ERROR com.mygithublab.DemoLoginTest - User login successfully error demo 1
