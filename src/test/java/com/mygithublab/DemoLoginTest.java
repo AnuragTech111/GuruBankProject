@@ -4,14 +4,32 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import pageObjects.LoginPage;
 import resources.BaseBrowser;
 
 public class DemoLoginTest extends BaseBrowser{
 	
 	private static Logger log = LogManager.getLogger(DemoLoginTest.class.getName());
 
+	LoginPage loginPage;
+	
+	@BeforeMethod
+	public void initialize() throws IOException
+	{
+		driver = driverInitialization();
+		driver.get(prop.getProperty("loginPageUrl"));
+		loginPage = new LoginPage(driver);
+	} 
+	
+	
 	@Test
 	public void loginByValidUserDemo() throws IOException
 	{
@@ -19,18 +37,28 @@ public class DemoLoginTest extends BaseBrowser{
 		//driver.get(prop.getProperty("loginPageUrl"));
 		//log.info("Login page is displayed successfully");
 		
-		navigateToLoginPage();
+		//navigateToLoginPage();
+		
+		loginPage.getUsername().sendKeys(prop.getProperty("username"));
+		loginPage.getPassword().sendKeys(prop.getProperty("password"));
+		loginPage.getLoginSubmit().click(); 
+		/* 
 		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys(prop.getProperty("username"));
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.findElement(By.xpath("//input[@type='submit']")).click(); 
+		*/
 		log.info("User login successfully");
-		log.error("User login successfully error demo 1");
-		log.fatal("User login successfully fatal demo 2");
-		log.debug("User login successfully debug demo 3");
 		String titleHome = driver.getTitle();
 		System.out.println(titleHome);
 		
 		Assert.assertEquals(titleHome, "Guru99 Bank Manager HomePage");
 	}
+	
+	@AfterMethod
+	public void closeBrowser()
+	{
+		driver.close();
+		driver = null;
+	} 
 	
 }

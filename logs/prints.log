@@ -1,2 +1,1 @@
-22:08:18.542 [main] FATAL com.mygithublab.DemoLoginTest - User login successfully fatal demo 2
-22:08:18.592 [main] DEBUG com.mygithublab.DemoLoginTest - User login successfully debug demo 3
+13:23:39.177 [main] INFO  com.mygithublab.DemoLoginTest - User login successfully

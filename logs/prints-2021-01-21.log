@@ -1,0 +1,6 @@
+13:20:53.050 [main] ERROR com.mygithublab.LoginTest - Username or Password is not correct
+13:21:08.382 [main] INFO  com.mygithublab.LoginTest - User login successfully
+13:22:37.753 [main] ERROR com.mygithublab.LoginTest - Username or Password is not correct
+13:22:52.096 [main] ERROR com.mygithublab.LoginTest - Username or Password is not correct
+13:23:05.379 [main] ERROR com.mygithublab.LoginTest - Username or Password is not correct
+13:23:21.601 [main] INFO  com.mygithublab.LoginTest - User login successfully

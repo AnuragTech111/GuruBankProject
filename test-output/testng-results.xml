@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33107" started-at="2021-01-20T16:37:45Z" finished-at="2021-01-20T16:38:18Z">
+  <suite name="Suite" duration-ms="80157" started-at="2021-01-21T07:52:19Z" finished-at="2021-01-21T07:53:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33107" started-at="2021-01-20T16:37:45Z" finished-at="2021-01-20T16:38:18Z">
+    <test name="Test" duration-ms="80157" started-at="2021-01-21T07:52:19Z" finished-at="2021-01-21T07:53:39Z">
+      <class name="com.mygithublab.LoginTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="initialize" is-config="true" duration-ms="16897" started-at="2021-01-21T13:22:19Z" finished-at="2021-01-21T13:22:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginByInvalidPassSS3()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="loginByInvalidPassSS3" duration-ms="1458" started-at="2021-01-21T13:22:36Z" finished-at="2021-01-21T13:22:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByInvalidPassSS3 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="closeBrowser" is-config="true" duration-ms="2352" started-at="2021-01-21T13:22:37Z" finished-at="2021-01-21T13:22:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="initialize" is-config="true" duration-ms="10478" started-at="2021-01-21T13:22:40Z" finished-at="2021-01-21T13:22:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginByInvalidUserPassSS4()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="loginByInvalidUserPassSS4" duration-ms="1499" started-at="2021-01-21T13:22:50Z" finished-at="2021-01-21T13:22:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByInvalidUserPassSS4 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="closeBrowser" is-config="true" duration-ms="607" started-at="2021-01-21T13:22:52Z" finished-at="2021-01-21T13:22:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="initialize" is-config="true" duration-ms="10779" started-at="2021-01-21T13:22:52Z" finished-at="2021-01-21T13:23:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginByInvalidUserSS2()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="loginByInvalidUserSS2" duration-ms="1888" started-at="2021-01-21T13:23:03Z" finished-at="2021-01-21T13:23:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByInvalidUserSS2 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="closeBrowser" is-config="true" duration-ms="547" started-at="2021-01-21T13:23:05Z" finished-at="2021-01-21T13:23:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="initialize" is-config="true" duration-ms="10052" started-at="2021-01-21T13:23:05Z" finished-at="2021-01-21T13:23:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginByValidUserSS1()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="loginByValidUserSS1" duration-ms="5657" started-at="2021-01-21T13:23:16Z" finished-at="2021-01-21T13:23:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByValidUserSS1 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.LoginTest@45c7e403]" name="closeBrowser" is-config="true" duration-ms="544" started-at="2021-01-21T13:23:21Z" finished-at="2021-01-21T13:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.mygithublab.LoginTest -->
       <class name="com.mygithublab.DemoLoginTest">
-        <test-method status="PASS" signature="loginByValidUserDemo()[pri:0, instance:com.mygithublab.DemoLoginTest@fbd1f6]" name="loginByValidUserDemo" duration-ms="33090" started-at="2021-01-20T22:07:45Z" finished-at="2021-01-20T22:08:18Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.DemoLoginTest@2925bf5b]" name="initialize" is-config="true" duration-ms="11792" started-at="2021-01-21T13:23:22Z" finished-at="2021-01-21T13:23:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginByValidUserDemo()[pri:0, instance:com.mygithublab.DemoLoginTest@2925bf5b]" name="loginByValidUserDemo" duration-ms="5203" started-at="2021-01-21T13:23:34Z" finished-at="2021-01-21T13:23:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginByValidUserDemo -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.DemoLoginTest@2925bf5b]" name="closeBrowser" is-config="true" duration-ms="360" started-at="2021-01-21T13:23:39Z" finished-at="2021-01-21T13:23:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.mygithublab.DemoLoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
