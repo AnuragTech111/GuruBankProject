@@ -1,12 +1,16 @@
 package resources;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 
 public class BaseBrowser {
 
@@ -40,6 +44,13 @@ public class BaseBrowser {
 		return driver;
 		
 		
+	}
+	
+	public void getScreenshots(String result) throws IOException 
+	{
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(src, new File("F://ScreenshotsSelenium//"+result+"_Failed_Screenshot.png"));
+		//FileUtils.copyFile(src,new File("F://ScreenshotsSelenium//"+result+"screenshot.png"));
 	}
 	
 	public void navigateToLoginPage() throws IOException

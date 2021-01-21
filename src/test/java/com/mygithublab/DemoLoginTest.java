@@ -40,18 +40,24 @@ public class DemoLoginTest extends BaseBrowser{
 		//navigateToLoginPage();
 		
 		loginPage.getUsername().sendKeys(prop.getProperty("username"));
-		loginPage.getPassword().sendKeys(prop.getProperty("password"));
+		loginPage.getPassword().sendKeys(prop.getProperty("invalidPassword"));
 		loginPage.getLoginSubmit().click(); 
 		/* 
 		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys(prop.getProperty("username"));
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(prop.getProperty("password"));
 		driver.findElement(By.xpath("//input[@type='submit']")).click(); 
 		*/
-		log.info("User login successfully");
-		String titleHome = driver.getTitle();
-		System.out.println(titleHome);
+        log.error("Username or Password is not correct");
 		
-		Assert.assertEquals(titleHome, "Guru99 Bank Manager HomePage");
+		String alertMessage = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		System.out.println(alertMessage);
+		Assert.assertEquals(alertMessage, "Username or Password is not correct");
+		/*log.info("User login successfully");
+		String titleHome = driver.getTitle();
+		System.out.println(titleHome); */
+		
+		//Assert.assertEquals(titleHome, "Guru99 Bank Manager HomePage");
 	}
 	
 	@AfterMethod
