@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -46,10 +47,19 @@ public class BaseBrowser {
 		
 	}
 	
-	public void getScreenshots(String result) throws IOException 
+	public void getScreenshots(String testcaseName, WebDriver driver) throws IOException 
 	{
+		// -----------  Updated Screenshot code with FileUtils ----------------
+		TakesScreenshot ts =(TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		String destFilename = System.getProperty("user.dir")+ "\\screenshots\\" + testcaseName + ".png" ;
+		FileUtils.copyFile(src, new File(destFilename));  // add commons-io dependency in POM for FileUtils class
+		
+		// -----------  Old Screenshot code with FileHandler----------------
+		/* 
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileHandler.copy(src, new File("F://ScreenshotsSelenium//"+result+"_Failed_Screenshot.png"));
+		*/
 		//FileUtils.copyFile(src,new File("F://ScreenshotsSelenium//"+result+"screenshot.png"));
 	}
 	

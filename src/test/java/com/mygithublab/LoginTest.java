@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -19,6 +20,7 @@ public class LoginTest extends BaseBrowser{
 	private static Logger log = LogManager.getLogger(LoginTest.class.getName());
 	
 	LoginPage loginPage;
+	WebDriver driver;
 	
 	@BeforeMethod
 	public void initialize() throws IOException
@@ -57,7 +59,7 @@ public class LoginTest extends BaseBrowser{
 		loginPage.getUsername().sendKeys(prop.getProperty("invalidUsername"));
 		loginPage.getPassword().sendKeys(prop.getProperty("password"));
 		loginPage.getLoginSubmit().click();
-		log.error("Username or Password is not correct");
+		log.info("Username or Password is not correct");
 		
 		String alertMessage = driver.switchTo().alert().getText();
 		driver.switchTo().alert().accept();
@@ -74,7 +76,7 @@ public class LoginTest extends BaseBrowser{
 		loginPage.getUsername().sendKeys(prop.getProperty("username"));
 		loginPage.getPassword().sendKeys(prop.getProperty("invalidPassword"));
 		loginPage.getLoginSubmit().click();
-		log.error("Username or Password is not correct");
+		log.info("Username or Password is not correct");
 		
 		String alertMessage = driver.switchTo().alert().getText();
 		driver.switchTo().alert().accept();
@@ -91,7 +93,7 @@ public class LoginTest extends BaseBrowser{
 		loginPage.getUsername().sendKeys(prop.getProperty("invalidUsername"));
 		loginPage.getPassword().sendKeys(prop.getProperty("invalidPassword"));
 		loginPage.getLoginSubmit().click();
-		log.error("Username or Password is not correct");
+		log.info("Username or Password is not correct");
 		
 		String alertMessage = driver.switchTo().alert().getText();
 		driver.switchTo().alert().accept();

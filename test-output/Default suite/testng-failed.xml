@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mygithublab.DemoLoginTest">
+      <class name="com.mygithublab.LoginExcelTest">
         <methods>
-          <include name="loginByValidUserDemo"/>
+          <include name="initialize"/>
+          <include name="loginValidFromExcelDataSS1"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.mygithublab.DemoLoginTest -->
+      </class> <!-- com.mygithublab.LoginExcelTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

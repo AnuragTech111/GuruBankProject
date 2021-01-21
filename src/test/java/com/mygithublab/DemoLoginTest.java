@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -19,6 +20,7 @@ public class DemoLoginTest extends BaseBrowser{
 	
 	private static Logger log = LogManager.getLogger(DemoLoginTest.class.getName());
 
+	WebDriver driver =null;
 	LoginPage loginPage;
 	
 	@BeforeMethod
@@ -40,24 +42,19 @@ public class DemoLoginTest extends BaseBrowser{
 		//navigateToLoginPage();
 		
 		loginPage.getUsername().sendKeys(prop.getProperty("username"));
-		loginPage.getPassword().sendKeys(prop.getProperty("invalidPassword"));
+		loginPage.getPassword().sendKeys(prop.getProperty("password"));
 		loginPage.getLoginSubmit().click(); 
 		/* 
 		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys(prop.getProperty("username"));
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(prop.getProperty("password"));
 		driver.findElement(By.xpath("//input[@type='submit']")).click(); 
 		*/
-        log.error("Username or Password is not correct");
 		
-		String alertMessage = driver.switchTo().alert().getText();
-		driver.switchTo().alert().accept();
-		System.out.println(alertMessage);
-		Assert.assertEquals(alertMessage, "Username or Password is not correct");
-		/*log.info("User login successfully");
+		log.info("User login successfully");
 		String titleHome = driver.getTitle();
-		System.out.println(titleHome); */
+		System.out.println(titleHome); 
 		
-		//Assert.assertEquals(titleHome, "Guru99 Bank Manager HomePage");
+		Assert.assertEquals(titleHome, "Guru99 Bank Manager HomePage");
 	}
 	
 	@AfterMethod

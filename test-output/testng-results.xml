@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41516" started-at="2021-01-21T13:30:22Z" finished-at="2021-01-21T13:31:03Z">
+  <suite name="Default suite" duration-ms="23836" started-at="2021-01-21T16:08:26Z" finished-at="2021-01-21T16:08:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41516" started-at="2021-01-21T13:30:22Z" finished-at="2021-01-21T13:31:03Z">
-      <class name="com.mygithublab.DemoLoginTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.DemoLoginTest@65e98b1c]" name="initialize" is-config="true" duration-ms="14665" started-at="2021-01-21T19:00:22Z" finished-at="2021-01-21T19:00:36Z">
+    <test name="Default test" duration-ms="23836" started-at="2021-01-21T16:08:26Z" finished-at="2021-01-21T16:08:50Z">
+      <class name="com.mygithublab.LoginExcelTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.mygithublab.LoginExcelTest@45c7e403]" name="initialize" is-config="true" duration-ms="15253" started-at="2021-01-21T21:38:26Z" finished-at="2021-01-21T21:38:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="loginByValidUserDemo()[pri:0, instance:com.mygithublab.DemoLoginTest@65e98b1c]" name="loginByValidUserDemo" duration-ms="6054" started-at="2021-01-21T19:00:36Z" finished-at="2021-01-21T19:00:42Z">
+        <test-method status="FAIL" signature="loginValidFromExcelDataSS1()[pri:0, instance:com.mygithublab.LoginExcelTest@45c7e403]" name="loginValidFromExcelDataSS1" duration-ms="6171" started-at="2021-01-21T21:38:41Z" finished-at="2021-01-21T21:38:47Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Username or Password is not correct] but found [User or Password is not valid]]]>
+              <![CDATA[expected [Guru99 Bank Manager HomePage1] but found [Guru99 Bank Manager HomePage]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Username or Password is not correct] but found [User or Password is not valid]
+              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage1] but found [Guru99 Bank Manager HomePage]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.mygithublab.DemoLoginTest.loginByValidUserDemo(DemoLoginTest.java:55)
+	at com.mygithublab.LoginExcelTest.loginValidFromExcelDataSS1(LoginExcelTest.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,12 +53,12 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginByValidUserDemo -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.DemoLoginTest@65e98b1c]" name="closeBrowser" is-config="true" duration-ms="11307" started-at="2021-01-21T19:00:52Z" finished-at="2021-01-21T19:01:03Z">
+        </test-method> <!-- loginValidFromExcelDataSS1 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mygithublab.LoginExcelTest@45c7e403]" name="closeBrowser" is-config="true" duration-ms="2373" started-at="2021-01-21T21:38:47Z" finished-at="2021-01-21T21:38:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.mygithublab.DemoLoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.mygithublab.LoginExcelTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

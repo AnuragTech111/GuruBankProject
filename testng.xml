@@ -8,7 +8,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <!--  <class name="com.mygithublab.AppTest"/>  -->
-      <!-- <class name="com.mygithublab.LoginTest"/> -->
+      <class name="com.mygithublab.LoginTest"/>
       <class name="com.mygithublab.DemoLoginTest"/>
     </classes>
   </test> 
