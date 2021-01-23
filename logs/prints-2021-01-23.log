@@ -1,0 +1,6 @@
+23:30:49.985 [TestNG] INFO  com.mygithublab.LoginTest - User login successfully
+23:31:11.637 [TestNG] INFO  com.mygithublab.DemoLoginTest - User login successfully
+23:34:50.705 [TestNG] INFO  com.mygithublab.LoginTest - Username or Password is not correct
+23:35:32.098 [TestNG] INFO  com.mygithublab.LoginTest - Username or Password is not correct
+23:35:55.162 [TestNG] INFO  com.mygithublab.LoginTest - Username or Password is not correct
+23:36:32.374 [TestNG] INFO  com.mygithublab.LoginTest - User login successfully

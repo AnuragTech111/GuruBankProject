@@ -47,7 +47,7 @@ public class BaseBrowser {
 		
 	}
 	
-	public void getScreenshots(String testcaseName, WebDriver driver) throws IOException 
+	public String getScreenshots(String testcaseName, WebDriver driver) throws IOException 
 	{
 		// -----------  Updated Screenshot code with FileUtils ----------------
 		TakesScreenshot ts =(TakesScreenshot)driver;
@@ -55,6 +55,7 @@ public class BaseBrowser {
 		String destFilename = System.getProperty("user.dir")+ "\\screenshots\\" + testcaseName + ".png" ;
 		FileUtils.copyFile(src, new File(destFilename));  // add commons-io dependency in POM for FileUtils class
 		
+		return destFilename;
 		// -----------  Old Screenshot code with FileHandler----------------
 		/* 
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

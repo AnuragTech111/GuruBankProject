@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <listeners>
     <listener class-name="com.mygithublab.Listeners"/>
   </listeners>
-  <test name="Test(failed)">
+  <test name="Test(failed)" parallel="tests">
     <classes>
       <class name="com.mygithublab.DemoLoginTest">
         <methods>
@@ -15,7 +15,6 @@
       </class> <!-- com.mygithublab.DemoLoginTest -->
       <class name="com.mygithublab.LoginTest">
         <methods>
-          <include name="loginByValidUserSS1"/>
           <include name="closeBrowser"/>
           <include name="loginByInvalidUserSS2"/>
           <include name="initialize"/>
